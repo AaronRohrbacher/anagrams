@@ -3,8 +3,8 @@ require('anagrams')
 
 describe('title_case') do
   it("checks if two words are anagrams") do
-    anagram = Anagram.new()
-    expect(anagram.check(["ruby", "bury"])).to eq(true)
+    anagram = Anagram.new(["ruby", "bury"], "ruby", "bury")
+    expect(anagram.check()).to eq(true)
   end
 
   it("Accounts for case insensitivity") do
@@ -32,5 +32,8 @@ describe('title_case') do
     expect(anagram.check(["Aaron. is cool!", "looc is noraa"])).to eq(true)
   end
 
-
+  it("checks multiple word phrases with punctuation for antigrams") do
+    anagram = Anagram.new()
+    expect(anagram.check(["Aaron. is cool!", "looc is noraa"])).to eq(true)
+  end
 end
