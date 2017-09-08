@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 # require('pry')
 class Anagram
   def initialize(word_array, phrase_input1, phrase_input2)
@@ -26,7 +25,6 @@ class Anagram
   end
 
   def is_word()
-    vowel_array = ['A', 'E', 'I', 'O', 'U', 'Y']
     anagram_check_words = @phrase_input1.upcase.split(" ") + @phrase_input2.upcase.split(" ")
     return_value = nil
     anagram_check_words.each do |word|
@@ -53,27 +51,5 @@ class Anagram
       end
     end
     return return_value
-  end
-
-puts "Please enter the first word"
-phrase1_input = gets.chomp
-puts "Please enter the second word"
-phrase2_input = gets.chomp
-anagram = Anagram.new([phrase1_input, phrase2_input], phrase1_input, phrase2_input)
-
-if anagram.is_word()
-  if anagram.anagram_check()
-    puts "Hooray! It's an anagram!"
-    if anagram.palindrome_check()
-      puts "Woah, it's also a palindrome."
-    end
-    else
-      puts "Doh! No anagram here."
-      if anagram.antigram_check()
-        puts "But you do, indeed, have an antigram!"
-      end
-    end
-  else
-  puts "Please enter real words!"
   end
 end
