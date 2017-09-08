@@ -19,7 +19,7 @@
 ## Setup/Installation Requirements
 
 * _Clone this repository_
-* _Be sure that 'script.rb' is executable by entering the 'lib' directory in your terminal and running the command: *.sh chmod +x script.rb *_
+* _Be sure that 'script.rb' is executable by entering the 'lib' directory in your terminal and running the command: `sh chmod +x script.rb`_
 
 
 
