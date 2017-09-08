@@ -16,4 +16,9 @@ describe('title_case') do
     anagram = Anagram.new()
     expect(anagram.palindrome_check(["noon", "noon"])).to eq(true)
   end
+
+  it("checks if inputted words contain vowels") do
+    anagram = Anagram.new()
+    expect(anagram.is_word("toe")).to eq(true)
+  end
 end
