@@ -36,6 +36,20 @@ class Anagram
     return return_value
   end
 
+  def antigram(word_array)
+    word1_array = word_array[0].upcase.split("")
+    word2 = word_array[1].upcase
+    return_value = nil
+    word1_array.each do |letter|
+      if word2.include? letter
+        return false
+      else
+        return_value = true
+      end
+    end
+    return return_value
+  end
+
 anagram_check = Anagram.new()
 puts "Please enter the first word"
 word1_input = gets.chomp
@@ -51,6 +65,9 @@ if (anagram_check.is_word(word1_input)) and (anagram_check.is_word(word2_input))
     end
     else
       puts "Doh! No anagram here."
+      if anagram_check.antigram([word1_input, word2_input])
+        puts "But you do, indeed, have an antigram!"
+      end
     end
   else
   puts "Please enter real words!"
