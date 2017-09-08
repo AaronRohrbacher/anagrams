@@ -2,8 +2,8 @@
 # require('pry')
 class Anagram
   def check(word_array)
-    word1 = word_array[0].upcase
-    word2 = word_array[1].upcase
+    word1 = word_array[0].upcase.gsub(/[^0-9A-Za-z]/, '')
+    word2 = word_array[1].upcase.gsub(/[^0-9A-Za-z]/, '')
     if word1.chars.sort === word2.chars.sort
       return true
     else
@@ -37,7 +37,7 @@ class Anagram
   end
 
   def antigram(word_array)
-    word1_array = word_array[0].upcase.split("")
+    word1_array = word_array[0].upcase.gsub(/[^0-9A-Za-z]/, '').split("")
     word2 = word_array[1].upcase
     return_value = nil
     word1_array.each do |letter|

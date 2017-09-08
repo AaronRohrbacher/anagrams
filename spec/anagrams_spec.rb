@@ -21,4 +21,16 @@ describe('title_case') do
     anagram = Anagram.new()
     expect(anagram.is_word("toe")).to eq(true)
   end
+
+  it("checks if words are antigrams") do
+    anagram = Anagram.new()
+    expect(anagram.antigram(["toe", "ply"])).to eq(true)
+  end
+
+  it("checks multiple word phrases with punctuation for anagrams") do
+    anagram = Anagram.new()
+    expect(anagram.check(["Aaron. is cool!", "looc is noraa"])).to eq(true)
+  end
+
+
 end
