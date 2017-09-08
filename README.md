@@ -19,7 +19,9 @@
 ## Setup/Installation Requirements
 
 * _Clone this repository_
-* _Be sure that 'script.rb' is executable by entering the 'lib' directory in your terminal and running the command: `sh chmod +x script.rb`_
+* _Be sure that 'script.rb' is executable by entering the 'lib' directory in your terminal and running the command: `$ chmod +x script.rb`_
+* _run 'script.rb' by entering the 'lib' directory and running the command `$ ./script.rb`_
+* _Check for anagrams and antigrams all day!_
 
 
 
@@ -28,7 +30,7 @@
 _Aaron Rohrbacher: aaronrohrbacher.github.io/portfolio/_
 
 ## Technologies Used
-
+_A script built on Ruby, and ran on the bash terminal._
 __
 
 Copyright (c) 2017 **_Aaron Rohrbacher_**
